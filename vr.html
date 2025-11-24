@@ -70,8 +70,9 @@
     }
 
     .image-grid img {
-      max-width: 30%;
-      height: auto;
+      height: auto; /* keep natural height */
+      width: auto;  /* keep natural width */
+      max-width: 48%; /* prevent overflow but keep aspect ratio */
       border: 2px solid #fff;
     }
 
@@ -81,14 +82,14 @@
 
     /* Video */
     .video-container {
-      width: 90%;
-      max-width: 1000px;
+      width: 100%;
+      max-width: 1200px;
       margin: 30px auto;
     }
 
     .video-container video {
       width: 100%;
-      height: auto;
+      height: auto; /* maintain aspect ratio */
       border: 2px solid #fff;
     }
 
@@ -129,13 +130,13 @@
       <video controls
              aria-label="Pirate ship sailing video"
              aria-details="pirate-video-transcript">
-        <source src="video/PirateVideo.mp4" type="video/mp4">
+        <source src="videos/PirateVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <p id="pirate-video-transcript">
-      <a href="video/PirateVideoTranscript.txt" style="color: #fff;">View transcript of the video</a>
+      <a href="videos/PirateVideoTranscript.txt" style="color: #fff;">View transcript of the video</a>
     </p>
 
   </div>
