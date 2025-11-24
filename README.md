@@ -1,4 +1,16 @@
-index.md      → Home page (About Me)
-vr.md         → Virtual Reality page
-3d.md         → 3D Games page
-2d.md         → 2D Games page
+<!-- NAV BAR -->
+<div style="text-align:center; font-size:20px; margin-bottom:30px;">
+  <a href="/index.md" style="margin: 0 20px;">Home</a>
+  <a href="/vr.md" style="margin: 0 20px;">Virtual Reality</a>
+  <a href="/3d.md" style="margin: 0 20px;">3D Games</a>
+  <a href="/2d.md" style="margin: 0 20px;">2D Games</a>
+</div>
+
+<div align="center">
+
+# About Me
+
+</div>
+
+Hi, I’m **[Your Name]**.  
+This portfolio showcases my VR, 3D, and 2D game development.
