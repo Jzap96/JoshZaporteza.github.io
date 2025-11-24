@@ -13,16 +13,6 @@
       padding: 0;
     }
 
-    /* Content wrapper with side lines and centered text */
-    .content-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      border-left: 3px solid #fff;
-      border-right: 3px solid #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
     /* Nav bar styling */
     .nav-bar {
       text-align: center;
@@ -46,7 +36,17 @@
       text-decoration: underline;
     }
 
-    /* Image grids */
+    /* Full height wrapper with white side borders */
+    .content-wrapper {
+      border-left: 3px solid #fff;
+      border-right: 3px solid #fff;
+      padding: 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Image and video grid */
     .image-grid {
       display: flex;
       flex-wrap: wrap;
@@ -55,10 +55,11 @@
       margin-top: 10px;
     }
 
-    .image-grid img, .image-grid video {
-      width: 48%;
-      max-width: 640px;
-      height: auto;
+    .image-grid img,
+    .image-grid video {
+      width: 100%; /* Fill width between white bars */
+      max-width: 900px; /* Do not exceed content wrapper */
+      height: auto; /* Maintain aspect ratio */
       border: 2px solid #fff;
     }
 
@@ -79,6 +80,7 @@
     <a href="/2d.html">2D Games</a>
   </div>
 
+  <!-- CONTENT -->
   <div class="content-wrapper">
 
     <h1>Virtual Reality</h1>
