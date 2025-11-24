@@ -14,7 +14,6 @@
 
 ## Harbored
 
-### Images
 <div style="display:flex;flex-wrap:wrap;gap:10px;max-width:600px;">
   <img src="path/to/image1.jpg" width="48%">
   <img src="path/to/image2.jpg" width="48%">
