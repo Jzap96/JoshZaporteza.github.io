@@ -83,13 +83,17 @@
 
     /* Image Styling */
     .content-wrapper img {
-      margin-top: 50px; /* Space between text and image */
       max-width: 80%;    /* Image scales nicely */
       height: auto;
       border: 2px solid #fff; /* Optional border to match theme */
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    /* Specific spacing between multiple images */
+    .content-wrapper .image-spacing {
+      margin-top: 60px; /* Space between images */
     }
 
     /* Responsive Design */
@@ -113,6 +117,10 @@
       .content-wrapper p,
       .second-text {
         margin-bottom: 30px;
+        margin-top: 40px;
+      }
+
+      .content-wrapper .image-spacing {
         margin-top: 40px;
       }
     }
@@ -144,8 +152,11 @@
     <!-- Second Paragraph -->
     <p class="second-text">I like to focus on set dressing and white boxing. I have also led teams and helped out other leads with distributing tasks within groups.</p>
 
-    <!-- Image -->
+    <!-- First Image -->
     <img src="DreamPunk.png" alt="Dream Punk Screenshot">
+
+    <!-- Second Image with spacing -->
+    <img src="country.png" alt="Country Screenshot" class="image-spacing">
 
   </div>
 
