@@ -2,51 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
-  <title>Virtual Reality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Games</title>
   <style>
-    /* Universal Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body Styles */
     body {
-      background-color: #000; /* Black background */
+      background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
 
     /* Top Header */
     .header-top {
-      background-color: #0b1e5b; /* Dark Blue header */
+      background-color: #0b1e5b; /* Dark Blue header same as About Me */
       padding: 40px 0 10px 0;
-      width: 100%;  /* Ensures header spans full width */
+      width: 100%;
     }
 
     .header-top h1 {
-      font-size: 48px; /* Large name */
+      font-size: 48px;
       margin: 0;
     }
 
     .header-top h2 {
-      font-size: 24px; /* Smaller title */
+      font-size: 24px;
       margin: 0;
       font-weight: normal;
       color: #ccc;
     }
 
-    /* Nav Bar */
+    /* NAV BAR */
     .nav-bar {
-      background-color: #0b1e5b; /* Same dark blue as header */
-      padding: 20px 0;
+      background-color: #0b1e5b; /* Dark blue same as header */
+      text-align: center;
+      font-size: 20px;
+      padding: 40px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      text-align: center;
     }
 
     .nav-bar a {
@@ -62,78 +57,63 @@
 
     /* Content Area */
     .content-wrapper {
-      max-width: 1200px; /* Limit content width */
-      margin: 0 auto;  /* Center content */
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 20px;
-      background-color: #000; /* Black content area */
+      text-align: center;
+      background-color: #000;
     }
 
-    .tabs button {
-      margin: 0 10px;
-      padding: 8px 16px;
-      font-size: 16px;
-      cursor: pointer;
+    h1.page-title {
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .projects-header {
+      font-size: 32px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      color: #6a0dad;
       background-color: #222;
-      color: #fff;
-      border: 1px solid #fff;
-      border-radius: 4px;
+      padding: 20px;
+      border-radius: 0;
+      width: 100%;
     }
 
-    .tabs button:hover {
-      background-color: #444;
-    }
-
-    .image-grid {
+    .image-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
       justify-content: center;
-      margin-top: 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 50px;
     }
 
-    .image-grid img {
+    .image-container {
+      max-width: 45%;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
       height: auto;
-      max-width: 48%;
       border: 2px solid #fff;
     }
 
-    .tab-content > div {
-      margin-bottom: 30px;
+    .image-caption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.4;
     }
 
-    .tab-title {
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .sub-title {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    /* Responsive Design: Adjustments for small screens */
+    /* Responsive */
     @media (max-width: 768px) {
-      .header-top h1 {
-        font-size: 36px; /* Smaller header on smaller screens */
-      }
-
-      .header-top h2 {
-        font-size: 20px; /* Adjust subtitle size for smaller screens */
-      }
-
-      .nav-bar a {
-        font-size: 18px; /* Slightly smaller nav links */
-      }
-
-      .tabs button {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-
-      .image-grid img {
-        max-width: 100%; /* Images should take up full width on mobile */
-      }
+      .header-top h1 { font-size: 36px; }
+      .header-top h2 { font-size: 20px; }
+      .nav-bar a { font-size: 18px; }
+      .image-row { flex-direction: column; gap: 30px; }
+      .image-container { max-width: 90%; }
+      .projects-header { font-size: 28px; margin-top: 40px; margin-bottom: 30px; }
     }
   </style>
 </head>
@@ -153,55 +133,23 @@
     <a href="/2d.html">2D Games</a>
   </div>
 
+  <!-- CONTENT -->
   <div class="content-wrapper">
-    <h1>Virtual Reality</h1>
+    <h1 class="page-title">3D Games</h1>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button onclick="showTab('patched')">Patched</button>
-      <button onclick="showTab('dreampunk')">Dream Punk</button>
-    </div>
+    <div class="projects-header">Personal Projects</div>
 
-    <div class="tab-content">
-      <!-- Patched Content -->
-      <div id="patched" style="display:block;">
-        <div class="tab-title">Patched</div>
-        <div class="sub-title">Map</div>
-        <div class="image-grid">
-          <img src="path/to/map1.jpg" alt="Map 1">
-          <img src="path/to/map2.jpg" alt="Map 2">
-        </div>
-
-        <div class="image-grid">
-          <img src="path/to/image1.jpg" alt="Image 1">
-          <img src="path/to/image2.jpg" alt="Image 2">
-          <img src="path/to/image3.jpg" alt="Image 3">
-          <img src="path/to/image4.jpg" alt="Image 4">
-        </div>
+    <div class="image-row">
+      <div class="image-container">
+        <img src="images/3d_game1.png" alt="3D Game 1">
+        <div class="image-caption">In this VR-inspired 3D game, you navigate through a futuristic city solving puzzles and avoiding obstacles.</div>
       </div>
-
-      <!-- Dream Punk Content -->
-      <div id="dreampunk" style="display:none;">
-        <div class="tab-title">Dream Punk</div>
-        <div class="image-grid">
-          <img src="path/to/level1.jpg" alt="Level 1">
-          <img src="path/to/level2.jpg" alt="Level 2">
-          <img src="path/to/level3.jpg" alt="Level 3">
-          <img src="path/to/level4.jpg" alt="Level 4">
-        </div>
+      <div class="image-container">
+        <img src="images/3d_game2.png" alt="3D Game 2">
+        <div class="image-caption">A fantasy dungeon crawler where you explore caves, defeat enemies, and collect treasures.</div>
       </div>
     </div>
-
   </div>
-
-  <!-- Tab switching script -->
-  <script>
-    function showTab(tabId) {
-      document.getElementById('patched').style.display = 'none';
-      document.getElementById('dreampunk').style.display = 'none';
-      document.getElementById(tabId).style.display = 'block';
-    }
-  </script>
 
 </body>
 </html>
