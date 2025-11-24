@@ -13,16 +13,16 @@
       padding: 0;
     }
 
-    /* Content wrapper with white lines inset from edges */
+    /* Content wrapper with white lines inset 25% from edges */
     .content-wrapper {
-      width: 90%; /* inset from sides */
-      max-width: 1200px;
+      width: 50%; /* 25% margin on left and right leaves white lines inset */
+      min-width: 600px; /* optional: prevent wrapper from shrinking too much */
       margin: 0 auto;
       border-left: 3px solid #fff;
       border-right: 3px solid #fff;
       padding: 20px;
       text-align: center;
-      background-color: #000; /* black background inside white lines */
+      background-color: #000; /* black inside white lines */
     }
 
     /* Nav bar styling */
@@ -31,7 +31,7 @@
       font-size: 20px;
       margin-bottom: 30px;
       padding: 40px 0;
-      background-color: #007BFF; /* blue */
+      background-color: #0056b3; /* darker blue */
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -59,7 +59,6 @@
 
     .image-grid img {
       height: auto;
-      width: auto;
       max-width: 48%;
       border: 2px solid #fff;
     }
