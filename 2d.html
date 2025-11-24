@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Virtual Reality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
+  <title>2D Games</title>
   <style>
+    /* Universal Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styles */
     body {
       background-color: #000; /* Black background */
       color: #fff;
       font-family: Arial, sans-serif;
+      text-align: center; /* Center all text by default */
       margin: 0;
       padding: 0;
     }
@@ -16,6 +26,7 @@
     .header-top {
       background-color: #1a1a1a; /* Dark grey / black */
       padding: 40px 0 10px 0;
+      width: 100%;  /* Ensures header spans full width */
     }
 
     .header-top h1 {
@@ -32,13 +43,12 @@
 
     /* Nav Bar */
     .nav-bar {
-      text-align: center;
-      font-size: 20px;
-      padding: 40px 0;
       background-color: #666666; /* Grey nav bar */
+      padding: 20px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
+      text-align: center; /* Ensure nav links are centered */
     }
 
     .nav-bar a {
@@ -54,11 +64,14 @@
 
     /* Content Area */
     .content-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1200px; /* Limit content width */
+      margin: 0 auto;  /* Center content */
       padding: 20px;
-      text-align: center;
       background-color: #000; /* Black content area */
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
     }
 
     .image-grid {
@@ -75,10 +88,24 @@
       border: 2px solid #fff;
     }
 
-    h1, h2 {
-      margin-bottom: 20px;
-    }
+    /* Responsive Design: Adjustments for small screens */
+    @media (max-width: 768px) {
+      .header-top h1 {
+        font-size: 36px; /* Smaller header on smaller screens */
+      }
 
+      .header-top h2 {
+        font-size: 20px; /* Adjust subtitle size for smaller screens */
+      }
+
+      .nav-bar a {
+        font-size: 18px; /* Slightly smaller nav links */
+      }
+
+      .image-grid img {
+        max-width: 100%; /* Images should take up full width on mobile */
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,7 +135,6 @@
       <img src="path/to/image3.jpg" alt="Image 3">
       <img src="path/to/image4.jpg" alt="Image 4">
     </div>
-
   </div>
 
 </body>
