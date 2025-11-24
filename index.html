@@ -69,19 +69,15 @@
       margin-bottom: 20px;
     }
 
-    /* Full-width Personal Projects Header */
-    .projects-header-full {
-      width: 100%;
-      background-color: #222; /* Grey background */
-      padding: 20px 0;
+    .projects-header {
+      font-size: 32px;
       margin-top: 60px;
       margin-bottom: 40px;
-    }
-
-    .projects-header-full h2 {
       color: #6a0dad; /* Dark purple text */
-      font-size: 32px;
-      margin: 0;
+      background-color: #222; /* Grey background for Personal Projects */
+      padding: 20px;
+      border-radius: 0; /* Remove rounded corners to fill full width */
+      width: 100%;
     }
 
     /* Paragraph Spacing */
@@ -105,10 +101,22 @@
       margin-top: 50px;
     }
 
-    .image-row img {
+    .image-container {
       max-width: 45%;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
       height: auto;
       border: 2px solid #fff;
+    }
+
+    .image-caption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.4;
     }
 
     /* Responsive Design */
@@ -125,13 +133,19 @@
         font-size: 18px;
       }
 
-      .image-row img {
-        max-width: 100%;
-        margin-bottom: 30px;
+      .image-row {
+        flex-direction: column;
+        gap: 30px;
       }
 
-      .projects-header-full h2 {
+      .image-container {
+        max-width: 90%;
+      }
+
+      .projects-header {
         font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 30px;
       }
     }
   </style>
@@ -161,19 +175,22 @@
 
     <!-- Second Paragraph -->
     <p class="second-text">I like to focus on set dressing and white boxing. I have also led teams and helped out other leads with distributing tasks within groups.</p>
-  </div>
 
-  <!-- Personal Projects Header (Full Width) -->
-  <div class="projects-header-full">
-    <h2>Personal Projects</h2>
-  </div>
+    <!-- Personal Projects Header -->
+    <div class="projects-header">Personal Projects</div>
 
-  <!-- Images Side by Side -->
-  <div class="content-wrapper">
+    <!-- Images Side by Side with Captions -->
     <div class="image-row">
-      <img src="images/DreamPunk.png" alt="Dream Punk Screenshot">
-      <img src="images/Country.png" alt="Country Screenshot">
+      <div class="image-container">
+        <img src="images/DreamPunk.png" alt="Dream Punk Screenshot">
+        <div class="image-caption">For Dream Punk you are a spy that needs to complete a set of puzzles in rooms to get out of them, and for this room you are in a firing range where you need to shoot targets from specific angles.</div>
+      </div>
+      <div class="image-container">
+        <img src="images/country.png" alt="Country Screenshot">
+        <div class="image-caption">For this village you are just a normal boy living out his days in a hidden village in the forest surrounded by mountains from afar.</div>
+      </div>
     </div>
+
   </div>
 
 </body>
