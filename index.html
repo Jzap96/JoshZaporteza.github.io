@@ -68,6 +68,19 @@
       margin-bottom: 20px;
     }
 
+    /* Paragraph Spacing */
+    .content-wrapper p {
+      margin-bottom: 40px; /* Space between paragraphs */
+      line-height: 1.6;
+    }
+
+    /* Second Paragraph Spacing */
+    .second-text {
+      margin-top: 60px; /* Extra space before second paragraph */
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
     /* Image Styling */
     .content-wrapper img {
       margin-top: 50px; /* Space between text and image */
@@ -79,6 +92,30 @@
       margin-right: auto;
     }
 
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-top h1 {
+        font-size: 36px;
+      }
+
+      .header-top h2 {
+        font-size: 20px;
+      }
+
+      .nav-bar a {
+        font-size: 18px;
+      }
+
+      .content-wrapper img {
+        max-width: 100%;
+      }
+
+      .content-wrapper p,
+      .second-text {
+        margin-bottom: 30px;
+        margin-top: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -100,11 +137,16 @@
   <!-- CONTENT -->
   <div class="content-wrapper">
     <h1>About Me</h1>
-    <p>Hi, I’m <strong>Josh Zaporteza</strong>.<br>
-    This portfolio showcases my VR, 3D, and 2D game development.</p>
+
+    <!-- First Paragraph -->
+    <p>Hello, I am a level designer with a years of experience. While working on personal projects I am also working on larger games and currently working on a game called Zero Space. I am also working on smaller games with more of a focus on level designing, narrative writing, and lighting.</p>
+
+    <!-- Second Paragraph -->
+    <p class="second-text">I like to focus on set dressing and white boxing. I have also led teams and helped out other leads with distributing tasks within groups.</p>
 
     <!-- Image -->
     <img src="DreamPunk.png" alt="Dream Punk Screenshot">
+
   </div>
 
 </body>
