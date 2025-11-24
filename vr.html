@@ -5,7 +5,7 @@
   <title>Virtual Reality</title>
   <style>
     body {
-      background-color: #007BFF; /* blue border */
+      background-color: #007BFF; /* blue background for outside content area */
       color: #fff;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -33,34 +33,14 @@
       text-decoration: underline;
     }
 
-    /* Frame wrapper */
-    .frame-wrapper {
-      position: relative;
-      width: 90%;        /* white lines closer to edges */
-      max-width: 1400px;
+    .content-wrapper {
+      background-color: #000; /* black area under nav bar */
+      max-width: 1200px;
       margin: 0 auto;
-      background-color: #000;
-      text-align: center;
       padding: 20px;
-      box-sizing: border-box;
+      text-align: center;
     }
 
-    /* White borders */
-    .frame-wrapper::before,
-    .frame-wrapper::after,
-    .frame-left,
-    .frame-right {
-      content: "";
-      position: absolute;
-      background-color: #fff;
-    }
-
-    .frame-wrapper::before { top: 0; left: 0; height: 3px; width: 100%; }   /* top */
-    .frame-wrapper::after  { bottom: 0; left: 0; height: 3px; width: 100%; } /* bottom */
-    .frame-left  { top: 0; left: 0; width: 3px; height: 100%; }             /* left */
-    .frame-right { top: 0; right: 0; width: 3px; height: 100%; }            /* right */
-
-    /* Images */
     .image-grid {
       display: flex;
       flex-wrap: wrap;
@@ -79,7 +59,6 @@
       margin: 0 auto;
     }
 
-    /* Video */
     .video-container {
       position: relative;
       width: 100%;
@@ -94,7 +73,7 @@
       width: 100%;
       height: 100%;
       border: 2px solid #fff;
-      object-fit: contain; /* keeps aspect ratio */
+      object-fit: contain; /* preserves aspect ratio */
     }
 
     h1, h2 {
@@ -113,10 +92,7 @@
     <a href="/2d.html">2D Games</a>
   </div>
 
-  <div class="frame-wrapper">
-    <div class="frame-left"></div>
-    <div class="frame-right"></div>
-
+  <div class="content-wrapper">
     <h1>Virtual Reality</h1>
 
     <h2>Harbored</h2>
